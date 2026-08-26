@@ -1433,7 +1433,14 @@ if (args[0] === "api" && args[1] === "-i" && new RegExp("/issues/${number}/timel
         closedDir,
         plansDir,
         reportPath,
-        extraArgs: ["--item-numbers", String(number), "--comment-sync-min-age-days", "0"],
+        extraArgs: [
+          "--item-numbers",
+          String(number),
+          "--comment-sync-min-age-days",
+          "0",
+          "--event-apply-proof",
+          "--exact-event-publication",
+        ],
       });
     });
 
@@ -1454,6 +1461,7 @@ if (args[0] === "api" && args[1] === "-i" && new RegExp("/issues/${number}/timel
         action: "skipped_stale_review_comment_sync",
         reason:
           "live durable review tuple is newer than the local report: comment lease=9200, report lease=9100",
+        newerReviewTupleVerified: true,
       },
     ]);
   } finally {

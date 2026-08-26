@@ -12,6 +12,7 @@ export type EventApplyAction = {
   activeReviewLeaseExpiresAt: string;
   terminalPolicyNoopVerified: boolean;
   sourceDriftVerified: boolean;
+  newerReviewTupleVerified: boolean;
 };
 
 export type ExactEventPublishDisposition = {
@@ -94,6 +95,7 @@ export type ExactEventApplyDisposition =
   | "terminal_policy_noop"
   | "source_drift"
   | "close_coverage_deferred"
+  | "superseded"
   | "unproven";
 
 export function eventApplyRequeueLatestExpected({
@@ -160,6 +162,9 @@ export function exactEventApplyProof(
     soleExactAction === "kept_open" && soleExactResult?.activeReviewLeaseVerified === true
       ? normalizedReviewLeaseRetryAt(soleExactResult.activeReviewLeaseExpiresAt)
       : null;
+  const superseded =
+    soleExactAction === "skipped_stale_review_comment_sync" &&
+    soleExactResult?.newerReviewTupleVerified === true;
   return {
     exactActions,
     syncedCount,
@@ -186,9 +191,11 @@ export function exactEventApplyProof(
         ? "close_coverage_deferred"
         : terminalPolicyNoop
           ? "terminal_policy_noop"
-          : syncedCount + terminalCount > 0
-            ? "applied"
-            : "unproven",
+          : superseded
+            ? "superseded"
+            : syncedCount + terminalCount > 0
+              ? "applied"
+              : "unproven",
   };
 }
 
@@ -228,5 +235,6 @@ export function eventApplyAction(value: LooseRecord): EventApplyAction {
       typeof value.activeReviewLeaseExpiresAt === "string" ? value.activeReviewLeaseExpiresAt : "",
     terminalPolicyNoopVerified: value.terminalPolicyNoopVerified === true,
     sourceDriftVerified: value.sourceDriftVerified === true,
+    newerReviewTupleVerified: value.newerReviewTupleVerified === true,
   };
 }

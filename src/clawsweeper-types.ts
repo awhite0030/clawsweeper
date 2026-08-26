@@ -953,6 +953,7 @@ export interface ApplyResult {
   activeReviewLeaseExpiresAt?: string;
   terminalPolicyNoopVerified?: boolean;
   sourceDriftVerified?: boolean;
+  newerReviewTupleVerified?: boolean;
 }
 
 export interface FailedReviewRetryResult {
