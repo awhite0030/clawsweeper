@@ -3505,17 +3505,27 @@ export class ExactReviewQueue {
         );
         if (matches.length !== 1) continue;
         const item = matches[0];
-        const { requeued: didRequeue, parked } = finishExactReviewQueueItem(
-          state,
-          item,
-          now,
-          run.outcome,
-          0,
-          false,
-          undefined,
-          undefined,
-          this.random,
+        const canonicalTargetKey = `${item.decision.targetRepo}#${item.decision.itemNumber}`;
+        const projectionBeforeTerminalCommit = this.lifecycleProjectionStore.read(
+          canonicalTargetKey,
+          item.key,
+          item.revision,
         );
+        const { requeued: didRequeue, parked } =
+          projectionBeforeTerminalCommit?.terminalDisposition?.kind === "requeue" &&
+          run.outcome === "success"
+            ? this.requeueDirectLifecyclePublicationSync(state, item, now)
+            : finishExactReviewQueueItem(
+                state,
+                item,
+                now,
+                run.outcome,
+                0,
+                false,
+                undefined,
+                undefined,
+                this.random,
+              );
         reconciled += 1;
         if (parked) continue;
         if (didRequeue) {
