@@ -1963,8 +1963,13 @@ jobs:
           RESERVATION_STATUS: ${{ steps.reserve-exact-review-lease.outputs.status || 'unknown' }}
           REVIEW_EXIT_CODE: ${{ steps.review-exact-event-item.outputs.exit_code || 'unknown' }}
           REVIEW_OUTCOME: ${{ steps.review-exact-event-item.outcome || 'not_started' }}
+          COMPLETION_OUTCOME: ${{ steps.complete-exact-review-queue.outcome || 'unknown' }}
         run: |
-          echo "::error::Exact review generation failed: classification=codex_or_content_failure reservation=$RESERVATION_STATUS review_outcome=$REVIEW_OUTCOME review_exit=$REVIEW_EXIT_CODE"
+          if [ "$COMPLETION_OUTCOME" != "success" ] && [ "$REVIEW_OUTCOME" = "success" ]; then
+            echo "::error::Exact review generation failed: classification=queue_completion_failure reservation=$RESERVATION_STATUS review_outcome=$REVIEW_OUTCOME review_exit=$REVIEW_EXIT_CODE"
+          else
+            echo "::error::Exact review generation failed: classification=codex_or_content_failure reservation=$RESERVATION_STATUS review_outcome=$REVIEW_OUTCOME review_exit=$REVIEW_EXIT_CODE"
+          fi
           exit 1
 
   event-review-publish:
