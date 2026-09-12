@@ -1,0 +1,1551 @@
+(node:766448) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: manual queue policy cannot be widened by coalescing or ambiguous decision fields
+ok 1 - manual queue policy cannot be widened by coalescing or ambiguous decision fields
+  ---
+  duration_ms: 91.623698
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained run mismatch without mutation
+ok 2 - manual artifact admission rejects preserved-key retained run mismatch without mutation
+  ---
+  duration_ms: 43.784261
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained attempt mismatch without mutation
+ok 3 - manual artifact admission rejects preserved-key retained attempt mismatch without mutation
+  ---
+  duration_ms: 33.580252
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained source mismatch without mutation
+ok 4 - manual artifact admission rejects preserved-key retained source mismatch without mutation
+  ---
+  duration_ms: 34.006275
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained protocol mismatch without mutation
+ok 5 - manual artifact admission rejects preserved-key retained protocol mismatch without mutation
+  ---
+  duration_ms: 33.249821
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained revision mismatch without mutation
+ok 6 - manual artifact admission rejects preserved-key retained revision mismatch without mutation
+  ---
+  duration_ms: 48.214233
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects preserved-key retained generation mismatch without mutation
+ok 7 - manual artifact admission rejects preserved-key retained generation mismatch without mutation
+  ---
+  duration_ms: 34.584473
+  type: 'test'
+  ...
+# Subtest: manual artifact admission accepts exact preserved-key retained retries without a producer
+ok 8 - manual artifact admission accepts exact preserved-key retained retries without a producer
+  ---
+  duration_ms: 49.173166
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained run mismatch without mutation
+ok 9 - manual artifact admission rejects fallback retained run mismatch without mutation
+  ---
+  duration_ms: 29.764961
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained attempt mismatch without mutation
+ok 10 - manual artifact admission rejects fallback retained attempt mismatch without mutation
+  ---
+  duration_ms: 32.235324
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained source mismatch without mutation
+ok 11 - manual artifact admission rejects fallback retained source mismatch without mutation
+  ---
+  duration_ms: 30.77779
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained protocol mismatch without mutation
+ok 12 - manual artifact admission rejects fallback retained protocol mismatch without mutation
+  ---
+  duration_ms: 29.370505
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained revision mismatch without mutation
+ok 13 - manual artifact admission rejects fallback retained revision mismatch without mutation
+  ---
+  duration_ms: 29.833143
+  type: 'test'
+  ...
+# Subtest: manual artifact admission rejects fallback retained generation mismatch without mutation
+ok 14 - manual artifact admission rejects fallback retained generation mismatch without mutation
+  ---
+  duration_ms: 29.522281
+  type: 'test'
+  ...
+# Subtest: manual artifact admission accepts exact fallback retained retries without a producer
+ok 15 - manual artifact admission accepts exact fallback retained retries without a producer
+  ---
+  duration_ms: 35.210608
+  type: 'test'
+  ...
+# Subtest: manual artifact admission accepts a matching live producer without retained publication
+ok 16 - manual artifact admission accepts a matching live producer without retained publication
+  ---
+  duration_ms: 31.031388
+  type: 'test'
+  ...
+# Subtest: manual artifact admission accepts a matching live producer beside different retained provenance
+ok 17 - manual artifact admission accepts a matching live producer beside different retained provenance
+  ---
+  duration_ms: 46.327149
+  type: 'test'
+  ...
+# Subtest: ordinary queue and state-blob logs reject unbounded diagnostic arguments
+ok 18 - ordinary queue and state-blob logs reject unbounded diagnostic arguments
+  ---
+  duration_ms: 11.117897
+  type: 'test'
+  ...
+# Subtest: alarm scheduling keeps a closed reason set and stable tie priority
+ok 19 - alarm scheduling keeps a closed reason set and stable tie priority
+  ---
+  duration_ms: 38.379447
+  type: 'test'
+  ...
+# Subtest: alarm scheduling samples only the tenth invocation in each minute
+ok 20 - alarm scheduling samples only the tenth invocation in each minute
+  ---
+  duration_ms: 67.227649
+  type: 'test'
+  ...
+# Subtest: hosted admission gates Worker forwarding and queue authority persistence
+ok 21 - hosted admission gates Worker forwarding and queue authority persistence
+  ---
+  duration_ms: 6.288562
+  type: 'test'
+  ...
+# Subtest: enqueue visibility rejection happens before queue, receipt, or lifecycle persistence
+ok 22 - enqueue visibility rejection happens before queue, receipt, or lifecycle persistence
+  ---
+  duration_ms: 49.0714
+  type: 'test'
+  ...
+# Subtest: owner-fallback public targets are probed and admitted without configured profiles
+ok 23 - owner-fallback public targets are probed and admitted without configured profiles
+  ---
+  duration_ms: 26.528148
+  type: 'test'
+  ...
+# Subtest: configured other-owner targets are eligible while unknown public targets stop pre-effect
+ok 24 - configured other-owner targets are eligible while unknown public targets stop pre-effect
+  ---
+  duration_ms: 67.894916
+  type: 'test'
+  ...
+# Subtest: private metadata is probed with one central-only token and leaves no durable side effects
+ok 25 - private metadata is probed with one central-only token and leaves no durable side effects
+  ---
+  duration_ms: 118.300862
+  type: 'test'
+  ...
+# Subtest: one alarm pass reuses its central metadata token across visibility rechecks
+ok 26 - one alarm pass reuses its central metadata token across visibility rechecks
+  ---
+  duration_ms: 110.412862
+  type: 'test'
+  ...
+# Subtest: metadata quota reset durably defers admission before target credentials
+ok 27 - metadata quota reset durably defers admission before target credentials
+  ---
+  duration_ms: 137.812945
+  type: 'test'
+  ...
+# Subtest: branch and source authority admission precedes durable reservation
+ok 28 - branch and source authority admission precedes durable reservation
+  ---
+  duration_ms: 697.061627
+  type: 'test'
+  ...
+# Subtest: source authority fallback recovers a trusted receipt before admission
+ok 29 - source authority fallback recovers a trusted receipt before admission
+  ---
+  duration_ms: 92.13026
+  type: 'test'
+  ...
+# Subtest: source authority synchronize recovery never creates a missing receipt
+ok 30 - source authority synchronize recovery never creates a missing receipt
+  ---
+  duration_ms: 85.194288
+  type: 'test'
+  ...
+exact-review source authority verification deferred {
+  event: 'source_authority_verification_deferred',
+  category: 'github_outage'
+}
+exact-review source authority verification deferred {
+  event: 'source_authority_verification_deferred',
+  category: 'network'
+}
+# Subtest: source authority acknowledgement errors remain deferred without enqueue
+ok 31 - source authority acknowledgement errors remain deferred without enqueue
+  ---
+  duration_ms: 167.81347
+  type: 'test'
+  ...
+# Subtest: source authority acknowledgement recovery defers when credentials are missing
+ok 32 - source authority acknowledgement recovery defers when credentials are missing
+  ---
+  duration_ms: 26.973025
+  type: 'test'
+  ...
+exact-review source authority verification deferred {
+  event: 'source_authority_verification_deferred',
+  category: 'network'
+}
+# Subtest: source authority recovery reuses a receipt after create response loss
+ok 33 - source authority recovery reuses a receipt after create response loss
+  ---
+  duration_ms: 62.892426
+  type: 'test'
+  ...
+# Subtest: source authority acknowledgement recovery preserves concurrent receipt and source guards
+ok 34 - source authority acknowledgement recovery preserves concurrent receipt and source guards
+  ---
+  duration_ms: 178.757958
+  type: 'test'
+  ...
+# Subtest: authority reservations remain absent while visibility I/O is pending
+ok 35 - authority reservations remain absent while visibility I/O is pending
+  ---
+  duration_ms: 177.174214
+  type: 'test'
+  ...
+# Subtest: ordinary alarm admission rechecks public targets after item reads
+ok 36 - ordinary alarm admission rechecks public targets after item reads
+  ---
+  duration_ms: 379.506285
+  type: 'test'
+  ...
+# Subtest: ordinary command admission terminalizes locally or defers before target credentials
+ok 37 - ordinary command admission terminalizes locally or defers before target credentials
+  ---
+  duration_ms: 342.236694
+  type: 'test'
+  ...
+# Subtest: ordinary command admission does not finalize a newer status revision
+ok 38 - ordinary command admission does not finalize a newer status revision
+  ---
+  duration_ms: 90.974738
+  type: 'test'
+  ...
+# Subtest: private transition retires publication work without erasing durable fences
+ok 39 - private transition retires publication work without erasing durable fences
+  ---
+  duration_ms: 140.272979
+  type: 'test'
+  ...
+# Subtest: unknown publication visibility defers without spending an attempt
+ok 40 - unknown publication visibility defers without spending an attempt
+  ---
+  duration_ms: 186.486734
+  type: 'test'
+  ...
+# Subtest: single claim terminalizes a target before recording a workflow claim
+ok 41 - single claim terminalizes a target before recording a workflow claim
+  ---
+  duration_ms: 24.970274
+  type: 'test'
+  ...
+# Subtest: publication batch preflight terminalizes private members and releases retryable members
+ok 42 - publication batch preflight terminalizes private members and releases retryable members
+  ---
+  duration_ms: 69.811043
+  type: 'test'
+  ...
+# Subtest: exact-review queue coalesces deliveries, dispatches a bound rollout snapshot, and rejects duplicate claims
+ok 43 - exact-review queue coalesces deliveries, dispatches a bound rollout snapshot, and rejects duplicate claims
+  ---
+  duration_ms: 166.015547
+  type: 'test'
+  ...
+# Subtest: exact-review queue resolves a closed item before dispatch
+ok 44 - exact-review queue resolves a closed item before dispatch
+  ---
+  duration_ms: 70.767303
+  type: 'test'
+  ...
+# Subtest: exact-review queue dispatches a closed command item to complete its acknowledgement
+ok 45 - exact-review queue dispatches a closed command item to complete its acknowledgement
+  ---
+  duration_ms: 193.557332
+  type: 'test'
+  ...
+# Subtest: exact-review queue limits live admission probes to one bounded pass
+ok 46 - exact-review queue limits live admission probes to one bounded pass
+  ---
+  duration_ms: 149.04534
+  type: 'test'
+  ...
+# Subtest: exact-review queue throttles partial terminal admission passes
+ok 47 - exact-review queue throttles partial terminal admission passes
+  ---
+  duration_ms: 178.295789
+  type: 'test'
+  ...
+# Subtest: exact-review queue resolves missing target responses before dispatch
+ok 48 - exact-review queue resolves missing target responses before dispatch
+  ---
+  duration_ms: 426.331714
+  type: 'test'
+  ...
+# Subtest: exact-review queue terminalizes every admitted ordinary publication before legacy dispatch
+ok 49 - exact-review queue terminalizes every admitted ordinary publication before legacy dispatch
+  ---
+  duration_ms: 126.064462
+  type: 'test'
+  ...
+# Subtest: terminal publication cleanup does not block review admission in the same alarm
+ok 50 - terminal publication cleanup does not block review admission in the same alarm
+  ---
+  duration_ms: 86.034093
+  type: 'test'
+  ...
+# Subtest: publication reconcile terminalizes a completed protocol-v1 publication after its target closes
+ok 51 - publication reconcile terminalizes a completed protocol-v1 publication after its target closes
+  ---
+  duration_ms: 79.44103
+  type: 'test'
+  ...
+# Subtest: publication reconciliation dry runs preserve canonical state after private transitions
+ok 52 - publication reconciliation dry runs preserve canonical state after private transitions
+  ---
+  duration_ms: 212.396598
+  type: 'test'
+  ...
+# Subtest: publication reconciliation dry runs preserve expired batches without legacy candidates
+ok 53 - publication reconciliation dry runs preserve expired batches without legacy candidates
+  ---
+  duration_ms: 27.236482
+  type: 'test'
+  ...
+# Subtest: publication reconcile dry runs verify terminal legacy rows without deleting them
+ok 54 - publication reconcile dry runs verify terminal legacy rows without deleting them
+  ---
+  duration_ms: 126.565277
+  type: 'test'
+  ...
+# Subtest: publication reconcile terminalizes a closed legacy publication after its lease expires
+ok 55 - publication reconcile terminalizes a closed legacy publication after its lease expires
+  ---
+  duration_ms: 67.258949
+  type: 'test'
+  ...
+# Subtest: publication reconcile terminalizes a legacy row with outer-only command context
+ok 56 - publication reconcile terminalizes a legacy row with outer-only command context
+  ---
+  duration_ms: 62.871853
+  type: 'test'
+  ...
+# Subtest: publication reconcile preserves a legacy publication owned by an active batch
+ok 57 - publication reconcile preserves a legacy publication owned by an active batch
+  ---
+  duration_ms: 70.263295
+  type: 'test'
+  ...
+# Subtest: publication reconcile preserves active legacy leases and newer publication authority
+ok 58 - publication reconcile preserves active legacy leases and newer publication authority
+  ---
+  duration_ms: 92.936171
+  type: 'test'
+  ...
+# Subtest: publication reconcile terminalizes a completed protocol-v2 state-batch publication after its target closes
+ok 59 - publication reconcile terminalizes a completed protocol-v2 state-batch publication after its target closes
+  ---
+  duration_ms: 136.250118
+  type: 'test'
+  ...
+# Subtest: publication reconcile terminalizes a protocol-v2 row with outer-only command context
+ok 60 - publication reconcile terminalizes a protocol-v2 row with outer-only command context
+  ---
+  duration_ms: 83.014078
+  type: 'test'
+  ...
+# Subtest: publication reconcile preserves protocol-v2 state-batch rows owned by an active batch or lease
+ok 61 - publication reconcile preserves protocol-v2 state-batch rows owned by an active batch or lease
+  ---
+  duration_ms: 133.824481
+  type: 'test'
+  ...
+# Subtest: publication reconcile leaves a protocol-v2 state-batch row to existing stale-revision handling when a newer head exists
+ok 62 - publication reconcile leaves a protocol-v2 state-batch row to existing stale-revision handling when a newer head exists
+  ---
+  duration_ms: 114.470679
+  type: 'test'
+  ...
+# Subtest: exact-review batch preflight follows the publisher owner selection
+ok 63 - exact-review batch preflight follows the publisher owner selection
+  ---
+  duration_ms: 144.662281
+  type: 'test'
+  ...
+exact-review batch workflow dispatch failed { event: 'batch_workflow_dispatch_failed', category: 'github_outage' }
+# Subtest: exact-review batch terminal probe resets for a later departure
+ok 64 - exact-review batch terminal probe resets for a later departure
+  ---
+  duration_ms: 82.431804
+  type: 'test'
+  ...
+# Subtest: exact-review batch alarm avoids redundant full queue hydrations
+ok 65 - exact-review batch alarm avoids redundant full queue hydrations
+  ---
+  duration_ms: 170.979717
+  type: 'test'
+  ...
+# Subtest: exact-review batch claims keep a newer departure fence when an older workflow arrives
+ok 66 - exact-review batch claims keep a newer departure fence when an older workflow arrives
+  ---
+  duration_ms: 125.912032
+  type: 'test'
+  ...
+# Subtest: matching empty batch departures release their own fence and redispatch current work
+ok 67 - matching empty batch departures release their own fence and redispatch current work
+  ---
+  duration_ms: 156.7323
+  type: 'test'
+  ...
+# Subtest: exact-review batch claim retries re-admit each target and return only public members
+ok 68 - exact-review batch claim retries re-admit each target and return only public members
+  ---
+  duration_ms: 94.709037
+  type: 'test'
+  ...
+# Subtest: concurrent identical batch claims replay after admission clears the reservation
+ok 69 - concurrent identical batch claims replay after admission clears the reservation
+  ---
+  duration_ms: 88.237175
+  type: 'test'
+  ...
+# Subtest: exact-review batch retry rereads the membership fence after visibility I/O
+ok 70 - exact-review batch retry rereads the membership fence after visibility I/O
+  ---
+  duration_ms: 75.152676
+  type: 'test'
+  ...
+# Subtest: exact-review batch accepts an in-flight pre-probe rolling-deploy departure
+ok 71 - exact-review batch accepts an in-flight pre-probe rolling-deploy departure
+  ---
+  duration_ms: 124.282592
+  type: 'test'
+  ...
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'permanent_rejection'
+}
+# Subtest: exact-review queue retains a 404 item when the target repository is inaccessible
+ok 72 - exact-review queue retains a 404 item when the target repository is inaccessible
+  ---
+  duration_ms: 107.626631
+  type: 'test'
+  ...
+# Subtest: exact-review queue dispatches an item that remains open
+ok 73 - exact-review queue dispatches an item that remains open
+  ---
+  duration_ms: 89.457901
+  type: 'test'
+  ...
+# Subtest: exact-review queue supersedes a stale open pull-request head before dispatch
+ok 74 - exact-review queue supersedes a stale open pull-request head before dispatch
+  ---
+  duration_ms: 82.420235
+  type: 'test'
+  ...
+# Subtest: exact-review queue refreshes a stale pull-request command to the current head
+ok 75 - exact-review queue refreshes a stale pull-request command to the current head
+  ---
+  duration_ms: 230.904983
+  type: 'test'
+  ...
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+# Subtest: exact-review queue bounds item-specific terminal-state check failures
+ok 76 - exact-review queue bounds item-specific terminal-state check failures
+  ---
+  duration_ms: 76.003049
+  type: 'test'
+  ...
+# Subtest: exact-review admission warnings expose only closed categories and bounded counts
+ok 77 - exact-review admission warnings expose only closed categories and bounded counts
+  ---
+  duration_ms: 61.095804
+  type: 'test'
+  ...
+# Subtest: exact-review operational warnings omit item identity and raw upstream failures
+ok 78 - exact-review operational warnings omit item identity and raw upstream failures
+  ---
+  duration_ms: 528.877869
+  type: 'test'
+  ...
+# Subtest: exact-review authority deferral warnings omit repository, item, and exception identity
+ok 79 - exact-review authority deferral warnings omit repository, item, and exception identity
+  ---
+  duration_ms: 86.916278
+  type: 'test'
+  ...
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+# Subtest: exact-review queue parks an item after repeated item-specific target-state failures
+ok 80 - exact-review queue parks an item after repeated item-specific target-state failures
+  ---
+  duration_ms: 230.514326
+  type: 'test'
+  ...
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'validation_unknown'
+}
+# Subtest: admission failure starts a fresh budget after a retry policy epoch change
+ok 81 - admission failure starts a fresh budget after a retry policy epoch change
+  ---
+  duration_ms: 65.101459
+  type: 'test'
+  ...
+exact-review admission target check failed { event: 'admission_target_check_failed', category: 'github_outage' }
+# Subtest: exact-review queue globally backs off admission GitHub outages without charging item attempts
+ok 82 - exact-review queue globally backs off admission GitHub outages without charging item attempts
+  ---
+  duration_ms: 89.719097
+  type: 'test'
+  ...
+exact-review admission target check failed { event: 'admission_target_check_failed', category: 'rate_limit' }
+# Subtest: exact-review queue globally backs off admission 403 rate limits without charging item attempts
+ok 83 - exact-review queue globally backs off admission 403 rate limits without charging item attempts
+  ---
+  duration_ms: 66.077625
+  type: 'test'
+  ...
+exact-review admission target check failed {
+  event: 'admission_target_check_failed',
+  category: 'permanent_rejection'
+}
+# Subtest: exact-review queue keeps healthy targets moving when one target App access fails
+ok 84 - exact-review queue keeps healthy targets moving when one target App access fails
+  ---
+  duration_ms: 68.891617
+  type: 'test'
+  ...
+exact-review admission target check failed { event: 'admission_target_check_failed', category: 'authentication' }
+# Subtest: exact-review queue keeps healthy targets moving when one target item read is forbidden
+ok 85 - exact-review queue keeps healthy targets moving when one target item read is forbidden
+  ---
+  duration_ms: 97.017393
+  type: 'test'
+  ...
+# Subtest: exact-review admission does not restore a publication batch claim reservation
+ok 86 - exact-review admission does not restore a publication batch claim reservation
+  ---
+  duration_ms: 77.286039
+  type: 'test'
+  ...
+exact_review_queue_handler_failed {
+  phase: 'fetch',
+  trace_id: null,
+  endpoint: 'enqueue',
+  failure_category: 'handler_exception',
+  location: null
+}
+exact_review_queue_handler_failed {
+  phase: 'initialize',
+  trace_id: null,
+  endpoint: 'initialization',
+  failure_category: 'handler_exception',
+  location: null
+}
+exact_review_queue_handler_failed {
+  phase: 'fetch',
+  trace_id: null,
+  endpoint: 'stats',
+  failure_category: 'handler_exception',
+  location: null
+}
+exact_review_queue_handler_failed {
+  phase: 'fetch',
+  trace_id: null,
+  endpoint: 'enqueue',
+  failure_category: 'handler_exception',
+  location: null
+}
+# Subtest: exact-review terminal admission does not remove a newer queue revision
+ok 87 - exact-review terminal admission does not remove a newer queue revision
+  ---
+  duration_ms: 115.543217
+  type: 'test'
+  ...
+# Subtest: exact-review queue upgrades flow metrics without losing publication completions
+ok 88 - exact-review queue upgrades flow metrics without losing publication completions
+  ---
+  duration_ms: 32.106993
+  type: 'test'
+  ...
+# Subtest: exact-review publication cause telemetry keeps public cardinality bounded
+ok 89 - exact-review publication cause telemetry keeps public cardinality bounded
+  ---
+  duration_ms: 69.134915
+  type: 'test'
+  ...
+# Subtest: exact-review queue migrates delivery receipts and retains them for seven days
+ok 90 - exact-review queue migrates delivery receipts and retains them for seven days
+  ---
+  duration_ms: 37.415582
+  type: 'test'
+  ...
+# Subtest: exact-review receipt acceptance and queue mutation commit atomically
+ok 91 - exact-review receipt acceptance and queue mutation commit atomically
+  ---
+  duration_ms: 105.6397
+  type: 'test'
+  ...
+# Subtest: exact-review re-upgrade imports rollback-era queue mutations and receipts
+ok 92 - exact-review re-upgrade imports rollback-era queue mutations and receipts
+  ---
+  duration_ms: 43.149735
+  type: 'test'
+  ...
+# Subtest: exact-review re-upgrade distinguishes a refreshed rollback receipt
+ok 93 - exact-review re-upgrade distinguishes a refreshed rollback receipt
+  ---
+  duration_ms: 41.280008
+  type: 'test'
+  ...
+# Subtest: exact-review receipt pruning removes its translated shadow atomically
+ok 94 - exact-review receipt pruning removes its translated shadow atomically
+  ---
+  duration_ms: 41.691764
+  type: 'test'
+  ...
+# Subtest: exact-review re-upgrade fails closed for a divergent stale rollback shadow
+ok 95 - exact-review re-upgrade fails closed for a divergent stale rollback shadow
+  ---
+  duration_ms: 53.708373
+  type: 'test'
+  ...
+# Subtest: exact-review discards a stale rollback shadow when its refresh fails
+ok 96 - exact-review discards a stale rollback shadow when its refresh fails
+  ---
+  duration_ms: 38.535435
+  type: 'test'
+  ...
+# Subtest: exact-review rolls SQL back when an obsolete shadow cannot be removed
+ok 97 - exact-review rolls SQL back when an obsolete shadow cannot be removed
+  ---
+  duration_ms: 31.569624
+  type: 'test'
+  ...
+# Subtest: exact-review SQL rows outgrow the bounded rollback shadow without blocking intake
+ok 98 - exact-review SQL rows outgrow the bounded rollback shadow without blocking intake
+  ---
+  duration_ms: 117.253646
+  type: 'test'
+  ...
+# Subtest: exact-review migration removes its rollback shadow after one day
+ok 99 - exact-review migration removes its rollback shadow after one day
+  ---
+  duration_ms: 42.603723
+  type: 'test'
+  ...
+# Subtest: exact-review imports an active rollback before expiring an old bridge
+ok 100 - exact-review imports an active rollback before expiring an old bridge
+  ---
+  duration_ms: 40.338603
+  type: 'test'
+  ...
+# Subtest: a newer exact-review enqueue revokes a claimed immutable decision
+ok 101 - a newer exact-review enqueue revokes a claimed immutable decision
+  ---
+  duration_ms: 47.537314
+  type: 'test'
+  ...
+# Subtest: status receipt binding rejects an unknown heartbeat item without mutation
+ok 102 - status receipt binding rejects an unknown heartbeat item without mutation
+  ---
+  duration_ms: 28.178528
+  type: 'test'
+  ...
+# Subtest: status receipt binding validates the full active lease tuple first
+    # Subtest: lease_id
+    ok 1 - lease_id
+      ---
+      duration_ms: 29.577185
+      type: 'test'
+      ...
+    # Subtest: lease_revision
+    ok 2 - lease_revision
+      ---
+      duration_ms: 28.314209
+      type: 'test'
+      ...
+    # Subtest: run_id
+    ok 3 - run_id
+      ---
+      duration_ms: 28.135657
+      type: 'test'
+      ...
+    # Subtest: run_attempt
+    ok 4 - run_attempt
+      ---
+      duration_ms: 27.245342
+      type: 'test'
+      ...
+    # Subtest: claim_generation
+    ok 5 - claim_generation
+      ---
+      duration_ms: 25.481299
+      type: 'test'
+      ...
+    # Subtest: source_head_sha
+    ok 6 - source_head_sha
+      ---
+      duration_ms: 25.558214
+      type: 'test'
+      ...
+    1..6
+ok 103 - status receipt binding validates the full active lease tuple first
+  ---
+  duration_ms: 165.643662
+  type: 'test'
+  ...
+# Subtest: a newer revision accumulated during status revokes the old lease when status exits
+ok 104 - a newer revision accumulated during status revokes the old lease when status exits
+  ---
+  duration_ms: 33.25768
+  type: 'test'
+  ...
+# Subtest: a non-superseding revision accumulated during status preserves the active lease
+ok 105 - a non-superseding revision accumulated during status preserves the active lease
+  ---
+  duration_ms: 28.973751
+  type: 'test'
+  ...
+# Subtest: a markerless pre-deploy status lease still detects its superseding revision
+ok 106 - a markerless pre-deploy status lease still detects its superseding revision
+  ---
+  duration_ms: 24.623019
+  type: 'test'
+  ...
+# Subtest: a newer revision supersedes a general finalizing lease
+ok 107 - a newer revision supersedes a general finalizing lease
+  ---
+  duration_ms: 27.911933
+  type: 'test'
+  ...
+# Subtest: a newer exact-review enqueue revokes a claimed legacy workflow lease
+ok 108 - a newer exact-review enqueue revokes a claimed legacy workflow lease
+  ---
+  duration_ms: 27.242012
+  type: 'test'
+  ...
+# Subtest: exact-review claims advance generations only for newer run attempts
+ok 109 - exact-review claims advance generations only for newer run attempts
+  ---
+  duration_ms: 30.820834
+  type: 'test'
+  ...
+# Subtest: exact-review claim upgrades a legacy same-attempt generation
+ok 110 - exact-review claim upgrades a legacy same-attempt generation
+  ---
+  duration_ms: 25.311756
+  type: 'test'
+  ...
+# Subtest: exact-review claim and completion reject forged or incomplete lease tuples
+ok 111 - exact-review claim and completion reject forged or incomplete lease tuples
+  ---
+  duration_ms: 36.07249
+  type: 'test'
+  ...
+# Subtest: exact-review queue admits at most one active item per target repository
+ok 112 - exact-review queue admits at most one active item per target repository
+  ---
+  duration_ms: 147.861863
+  type: 'test'
+  ...
+exact_review_queue_alarm_schedule_sample {
+  alarm_count: 10,
+  wake_reason: 'queue',
+  scheduled_delay_ms: 277513,
+  alarm_lag_ms: 0,
+  decision_age_ms: 6,
+  bay_pending: false,
+  bay_backoff: false
+}
+# Subtest: exact-review review retries park at the attempt ceiling and recover after cooldown
+ok 113 - exact-review review retries park at the attempt ceiling and recover after cooldown
+  ---
+  duration_ms: 263.869122
+  type: 'test'
+  ...
+# Subtest: exact-review parking spreads a same-tick cohort across persisted recovery timestamps
+ok 114 - exact-review parking spreads a same-tick cohort across persisted recovery timestamps
+  ---
+  duration_ms: 84.952906
+  type: 'test'
+  ...
+# Subtest: exact-review automatic parked recovery remains bounded
+ok 115 - exact-review automatic parked recovery remains bounded
+  ---
+  duration_ms: 33.320954
+  type: 'test'
+  ...
+# Subtest: exact-review queue removes a terminal target after parked recovery is exhausted
+ok 116 - exact-review queue removes a terminal target after parked recovery is exhausted
+  ---
+  duration_ms: 124.359076
+  type: 'test'
+  ...
+# Subtest: exact-review queue retains open exhausted parked work and schedules another terminal check
+ok 117 - exact-review queue retains open exhausted parked work and schedules another terminal check
+  ---
+  duration_ms: 159.511183
+  type: 'test'
+  ...
+exact-review admission target check failed { event: 'admission_target_check_failed', category: 'network' }
+# Subtest: failed parked terminal check does not block healthy pending review dispatch
+ok 118 - failed parked terminal check does not block healthy pending review dispatch
+  ---
+  duration_ms: 169.69908
+  type: 'test'
+  ...
+# Subtest: exact-review queue removes a terminal dispatch rejection after parked recovery is exhausted
+ok 119 - exact-review queue removes a terminal dispatch rejection after parked recovery is exhausted
+  ---
+  duration_ms: 150.9533
+  type: 'test'
+  ...
+# Subtest: parked review operator routes paginate, resolve, and recover idempotently within caps
+ok 120 - parked review operator routes paginate, resolve, and recover idempotently within caps
+  ---
+  duration_ms: 40.550205
+  type: 'test'
+  ...
+# Subtest: parked review operator routes flag and refuse both command-context variants
+ok 121 - parked review operator routes flag and refuse both command-context variants
+  ---
+  duration_ms: 29.985906
+  type: 'test'
+  ...
+# Subtest: seeded parked-review pagination survives removal of the cursor item
+ok 122 - seeded parked-review pagination survives removal of the cursor item
+  ---
+  duration_ms: 25.334253
+  type: 'test'
+  ...
+# Subtest: unseeded parked-review pagination uses its locale ordering for the cursor
+ok 123 - unseeded parked-review pagination uses its locale ordering for the cursor
+  ---
+  duration_ms: 23.894224
+  type: 'test'
+  ...
+# Subtest: parked review retry budgets reset only for source or policy drift
+ok 124 - parked review retry budgets reset only for source or policy drift
+  ---
+  duration_ms: 53.75588
+  type: 'test'
+  ...
+# Subtest: older issue revisions cannot reset an exhausted review budget
+ok 125 - older issue revisions cannot reset an exhausted review budget
+  ---
+  duration_ms: 33.439465
+  type: 'test'
+  ...
+# Subtest: same-second issue successors remain queued behind an active review
+ok 126 - same-second issue successors remain queued behind an active review
+  ---
+  duration_ms: 30.335489
+  type: 'test'
+  ...
+# Subtest: same-source queue revisions preserve an exhausted review budget
+ok 127 - same-source queue revisions preserve an exhausted review budget
+  ---
+  duration_ms: 31.681425
+  type: 'test'
+  ...
+# Subtest: target branch changes reset an exhausted review budget
+ok 128 - target branch changes reset an exhausted review budget
+  ---
+  duration_ms: 28.25491
+  type: 'test'
+  ...
+# Subtest: standalone prompt changes reset an exhausted review budget
+ok 129 - standalone prompt changes reset an exhausted review budget
+  ---
+  duration_ms: 27.922615
+  type: 'test'
+  ...
+# Subtest: parked recovery advances source authority past delayed older webhooks
+ok 130 - parked recovery advances source authority past delayed older webhooks
+  ---
+  duration_ms: 32.098965
+  type: 'test'
+  ...
+# Subtest: timestamp-only successors discard inherited content digests
+ok 131 - timestamp-only successors discard inherited content digests
+  ---
+  duration_ms: 25.977156
+  type: 'test'
+  ...
+# Subtest: same-source successor revisions cannot bypass the active lease retry ceiling
+ok 132 - same-source successor revisions cannot bypass the active lease retry ceiling
+  ---
+  duration_ms: 25.742936
+  type: 'test'
+  ...
+# Subtest: a policy epoch change resets a failing same-revision lease budget
+ok 133 - a policy epoch change resets a failing same-revision lease budget
+  ---
+  duration_ms: 25.610983
+  type: 'test'
+  ...
+# Subtest: fresh review admissions start on the active retry policy epoch
+ok 134 - fresh review admissions start on the active retry policy epoch
+  ---
+  duration_ms: 24.501451
+  type: 'test'
+  ...
+# Subtest: expired same-source successor leases preserve their retry budget
+ok 135 - expired same-source successor leases preserve their retry budget
+  ---
+  duration_ms: 26.866979
+  type: 'test'
+  ...
+# Subtest: exact-review admission requeue_latest resets failures instead of parking at the review ceiling
+ok 136 - exact-review admission requeue_latest resets failures instead of parking at the review ceiling
+  ---
+  duration_ms: 28.098466
+  type: 'test'
+  ...
+# Subtest: exact-review queue can use the global capacity for one target
+ok 137 - exact-review queue can use the global capacity for one target
+  ---
+  duration_ms: 202.991076
+  type: 'test'
+  ...
+# Subtest: exact-review queue keeps publication artifacts durable outside review capacity
+ok 138 - exact-review queue keeps publication artifacts durable outside review capacity
+  ---
+  duration_ms: 200.179975
+  type: 'test'
+  ...
+# Subtest: exact-review queue wakes while target capacity remains
+ok 139 - exact-review queue wakes while target capacity remains
+  ---
+  duration_ms: 88.332986
+  type: 'test'
+  ...
+# Subtest: exact-review queue defers retained backlog until a paused dispatcher retry
+ok 140 - exact-review queue defers retained backlog until a paused dispatcher retry
+  ---
+  duration_ms: 153.630795
+  type: 'test'
+  ...
+canonical_record_tuple_conflict
+# Subtest: canonical tuple publication updates Worker authority without a git projection row
+ok 141 - canonical tuple publication updates Worker authority without a git projection row
+  ---
+  duration_ms: 39.754637
+  type: 'test'
+  ...
+canonical_record_tuple_rejected
+# Subtest: fallback tuple publication normalizes mixed-case keys onto existing lowercase storage
+ok 142 - fallback tuple publication normalizes mixed-case keys onto existing lowercase storage
+  ---
+  duration_ms: 59.286458
+  type: 'test'
+  ...
+# Subtest: review coverage summarizes canonical item records per fleet
+ok 143 - review coverage summarizes canonical item records per fleet
+  ---
+  duration_ms: 45.566378
+  type: 'test'
+  ...
+# Subtest: worker exposes review coverage through the public API route
+ok 144 - worker exposes review coverage through the public API route
+  ---
+  duration_ms: 28.958195
+  type: 'test'
+  ...
+Resolved 1 canonical record tuple(s)
+Resolved 1 canonical record tuple(s)
+# Subtest: apply preselect and checkpoint publish captured canonical tuple baselines
+ok 145 - apply preselect and checkpoint publish captured canonical tuple baselines
+  ---
+  duration_ms: 48.458785
+  type: 'test'
+  ...
+# Subtest: canonical tuple failures return stable errors and sanitize server logs
+ok 146 - canonical tuple failures return stable errors and sanitize server logs
+  ---
+  duration_ms: 24.436997
+  type: 'test'
+  ...
+# Subtest: publication plan, lifecycle, and snapshot failures log only fixed events
+ok 147 - publication plan, lifecycle, and snapshot failures log only fixed events
+  ---
+  duration_ms: 74.794841
+  type: 'test'
+  ...
+# Subtest: canonical tuple publication accepts explicit absent sidecars and closed records
+ok 148 - canonical tuple publication accepts explicit absent sidecars and closed records
+  ---
+  duration_ms: 32.200747
+  type: 'test'
+  ...
+canonical_record_tuple_rejected
+# Subtest: internal state endpoints reject invalid HMAC signatures
+ok 149 - internal state endpoints reject invalid HMAC signatures
+  ---
+  duration_ms: 26.818287
+  type: 'test'
+  ...
+# Subtest: internal state writer routes authenticate and preserve durable ticket identity
+ok 150 - internal state writer routes authenticate and preserve durable ticket identity
+  ---
+  duration_ms: 83.781025
+  type: 'test'
+  ...
+# Subtest: authenticated legacy exact-review intake enters the durable queue
+ok 151 - authenticated legacy exact-review intake enters the durable queue
+  ---
+  duration_ms: 33.989139
+  type: 'test'
+  ...
+# Subtest: authenticated legacy pull request intake reserves source authority
+ok 152 - authenticated legacy pull request intake reserves source authority
+  ---
+  duration_ms: 30.884956
+  type: 'test'
+  ...
+# Subtest: authenticated legacy intake durably reserves missing branch authority
+ok 153 - authenticated legacy intake durably reserves missing branch authority
+  ---
+  duration_ms: 29.016485
+  type: 'test'
+  ...
+# Subtest: exact-review queue rejects unbounded or unsafe command context
+ok 154 - exact-review queue rejects unbounded or unsafe command context
+  ---
+  duration_ms: 27.738706
+  type: 'test'
+  ...
+# Subtest: exact-review queue retries dispatch failures and reclaims an unclaimed lease
+ok 155 - exact-review queue retries dispatch failures and reclaims an unclaimed lease
+  ---
+  duration_ms: 126.165457
+  type: 'test'
+  ...
+# Subtest: exact-review queue automatically retries a parked dispatch rejection after cooldown
+ok 156 - exact-review queue automatically retries a parked dispatch rejection after cooldown
+  ---
+  duration_ms: 228.587758
+  type: 'test'
+  ...
+# Subtest: exact-review queue retains a synchronize update after an unclassified 422
+ok 157 - exact-review queue retains a synchronize update after an unclassified 422
+  ---
+  duration_ms: 156.924553
+  type: 'test'
+  ...
+# Subtest: exact-review queue treats a secondary-limit 422 as a global retry
+ok 158 - exact-review queue treats a secondary-limit 422 as a global retry
+  ---
+  duration_ms: 268.596995
+  type: 'test'
+  ...
+# Subtest: exact-review queue globally backs off GitHub outages without charging item attempts
+ok 159 - exact-review queue globally backs off GitHub outages without charging item attempts
+  ---
+  duration_ms: 67.176026
+  type: 'test'
+  ...
+exact_review_queue_handler_failed {
+  phase: 'fetch',
+  trace_id: null,
+  endpoint: 'complete',
+  failure_category: 'handler_exception',
+  location: null
+}
+exact_review_queue_stranded_alarm_rearmed {
+  observed_at: 1784189700000,
+  previous_alarm_at: 1784188830000,
+  new_alarm_at: 1784189701000
+}
+exact-review admission shed {
+  event: 'admission_shed',
+  category: 'scheduled_rate',
+  lane: 'normal_backfill'
+}
+exact-review admission shed {
+  event: 'admission_shed',
+  category: 'scheduled_rate',
+  lane: 'background'
+}
+exact-review admission shed {
+  event: 'admission_shed',
+  category: 'scheduled_rate',
+  lane: 'background'
+}
+exact-review admission shed {
+  event: 'admission_shed',
+  category: 'scheduled_rate',
+  lane: 'background'
+}
+exact_review_queue_stranded_alarm_rearmed {
+  observed_at: 1786199460000,
+  previous_alarm_at: 1786194090000,
+  new_alarm_at: 1786199461000
+}
+review_failure_telemetry_not_recorded
+# Subtest: exact-review queue preserves a claimed lease after an ambiguous dispatch failure
+ok 160 - exact-review queue preserves a claimed lease after an ambiguous dispatch failure
+  ---
+  duration_ms: 149.659706
+  type: 'test'
+  ...
+# Subtest: exact-review queue requeues a cancelled claimed lease
+ok 161 - exact-review queue requeues a cancelled claimed lease
+  ---
+  duration_ms: 36.53748
+  type: 'test'
+  ...
+# Subtest: exact-review publication capacity backs off on GitHub pressure and recovers gradually
+ok 162 - exact-review publication capacity backs off on GitHub pressure and recovers gradually
+  ---
+  duration_ms: 77.053028
+  type: 'test'
+  ...
+# Subtest: exact-review publication retries a state fetch timeout without throttling capacity
+ok 163 - exact-review publication retries a state fetch timeout without throttling capacity
+  ---
+  duration_ms: 33.718478
+  type: 'test'
+  ...
+# Subtest: exact-review publication records an unattempted target-app quota circuit as backoff
+ok 164 - exact-review publication records an unattempted target-app quota circuit as backoff
+  ---
+  duration_ms: 31.45963
+  type: 'test'
+  ...
+# Subtest: exact-review publication gives state contention the transient retry budget
+ok 165 - exact-review publication gives state contention the transient retry budget
+  ---
+  duration_ms: 31.711259
+  type: 'test'
+  ...
+# Subtest: exact-review publication defers an active review lease without throttling capacity
+ok 166 - exact-review publication defers an active review lease without throttling capacity
+  ---
+  duration_ms: 31.284414
+  type: 'test'
+  ...
+# Subtest: exact-review publication supersedes stale tuples without counting a publish
+ok 167 - exact-review publication supersedes stale tuples without counting a publish
+  ---
+  duration_ms: 30.180058
+  type: 'test'
+  ...
+# Subtest: exact-review publication dead-letters exhausted permanent failures and replays idempotently
+ok 168 - exact-review publication dead-letters exhausted permanent failures and replays idempotently
+  ---
+  duration_ms: 35.152671
+  type: 'test'
+  ...
+# Subtest: exact-review dead letters expose diagnostics and recover fresh reviews in bounded batches
+ok 169 - exact-review dead letters expose diagnostics and recover fresh reviews in bounded batches
+  ---
+  duration_ms: 36.134464
+  type: 'test'
+  ...
+# Subtest: a later exact-review cycle still publishes after an earlier cycle raised the publication head
+ok 170 - a later exact-review cycle still publishes after an earlier cycle raised the publication head
+  ---
+  duration_ms: 30.753548
+  type: 'test'
+  ...
+# Subtest: an existing exact-review item rebases above the publication head on a newer source event
+ok 171 - an existing exact-review item rebases above the publication head on a newer source event
+  ---
+  duration_ms: 32.539343
+  type: 'test'
+  ...
+# Subtest: dead-letter fresh recovery seeds a review revision that can still publish
+ok 172 - dead-letter fresh recovery seeds a review revision that can still publish
+  ---
+  duration_ms: 30.720913
+  type: 'test'
+  ...
+# Subtest: exact-review fresh recovery preserves failed-shard review-only behavior
+ok 173 - exact-review fresh recovery preserves failed-shard review-only behavior
+  ---
+  duration_ms: 27.479206
+  type: 'test'
+  ...
+# Subtest: exact-review fresh recovery leaves an active review item untouched
+ok 174 - exact-review fresh recovery leaves an active review item untouched
+  ---
+  duration_ms: 29.152998
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery atomically rejects transferred active aliases
+ok 175 - guarded dead-letter recovery atomically rejects transferred active aliases
+  ---
+  duration_ms: 73.479362
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery rejects inventory changes inside its transaction
+ok 176 - guarded dead-letter recovery rejects inventory changes inside its transaction
+  ---
+  duration_ms: 34.879589
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter resolution preserves a concurrently active transferred alias
+ok 177 - guarded dead-letter resolution preserves a concurrently active transferred alias
+  ---
+  duration_ms: 37.634775
+  type: 'test'
+  ...
+# Subtest: superseded dead-letter resolution records its note and queue metrics honestly
+ok 178 - superseded dead-letter resolution records its note and queue metrics honestly
+  ---
+  duration_ms: 44.009877
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter resolution rejects an entire mixed-safe batch atomically
+ok 179 - guarded dead-letter resolution rejects an entire mixed-safe batch atomically
+  ---
+  duration_ms: 36.679678
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery retries remain idempotent after inventory changes
+ok 180 - guarded dead-letter recovery retries remain idempotent after inventory changes
+  ---
+  duration_ms: 31.606789
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery enforces live review capacity transactionally
+ok 181 - guarded dead-letter recovery enforces live review capacity transactionally
+  ---
+  duration_ms: 29.42039
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery enqueues transferred items at their canonical target
+ok 182 - guarded dead-letter recovery enqueues transferred items at their canonical target
+  ---
+  duration_ms: 29.393652
+  type: 'test'
+  ...
+# Subtest: guarded dead-letter recovery rejects canonical targets outside the sibling alias fence
+ok 183 - guarded dead-letter recovery rejects canonical targets outside the sibling alias fence
+  ---
+  duration_ms: 28.416548
+  type: 'test'
+  ...
+# Subtest: exact-review publication refreshes an artifact after its third unavailable attempt
+ok 184 - exact-review publication refreshes an artifact after its third unavailable attempt
+  ---
+  duration_ms: 31.650048
+  type: 'test'
+  ...
+# Subtest: manual artifact exhaustion dead-letters the original producer without model recovery
+ok 185 - manual artifact exhaustion dead-letters the original producer without model recovery
+  ---
+  duration_ms: 53.801955
+  type: 'test'
+  ...
+# Subtest: exact-review publication refreshes a deterministic invalid artifact immediately
+ok 186 - exact-review publication refreshes a deterministic invalid artifact immediately
+  ---
+  duration_ms: 26.386323
+  type: 'test'
+  ...
+# Subtest: exact-review publication completes a close-coverage deferral without refreshing
+ok 187 - exact-review publication completes a close-coverage deferral without refreshing
+  ---
+  duration_ms: 32.581965
+  type: 'test'
+  ...
+# Subtest: exact-review publication accepts the legacy close-coverage refresh during rollout
+ok 188 - exact-review publication accepts the legacy close-coverage refresh during rollout
+  ---
+  duration_ms: 25.938232
+  type: 'test'
+  ...
+# Subtest: exact-review publication retry budgets ignore earlier dispatch failures
+ok 189 - exact-review publication retry budgets ignore earlier dispatch failures
+  ---
+  duration_ms: 30.471669
+  type: 'test'
+  ...
+# Subtest: exact-review publication retains one unknown completion for a current-workflow retry
+ok 190 - exact-review publication retains one unknown completion for a current-workflow retry
+  ---
+  duration_ms: 31.078488
+  type: 'test'
+  ...
+# Subtest: exact-review exhausted unknown failures retain durable privacy-safe cause attribution
+ok 191 - exact-review exhausted unknown failures retain durable privacy-safe cause attribution
+  ---
+  duration_ms: 36.989402
+  type: 'test'
+  ...
+# Subtest: ordinary exact-review retries do not increment publication retry telemetry
+ok 192 - ordinary exact-review retries do not increment publication retry telemetry
+  ---
+  duration_ms: 30.861677
+  type: 'test'
+  ...
+# Subtest: exact-review completion rejects incompatible structured dispositions
+ok 193 - exact-review completion rejects incompatible structured dispositions
+  ---
+  duration_ms: 24.510006
+  type: 'test'
+  ...
+# Subtest: exact-review publication recovery ignores successful source-drift requeues
+ok 194 - exact-review publication recovery ignores successful source-drift requeues
+  ---
+  duration_ms: 31.975001
+  type: 'test'
+  ...
+# Subtest: exact-review queue completes a failed shard recovery without a second retry
+ok 195 - exact-review queue completes a failed shard recovery without a second retry
+  ---
+  duration_ms: 26.966798
+  type: 'test'
+  ...
+# Subtest: failed shard recovery does not replace an already-pending ordinary event
+ok 196 - failed shard recovery does not replace an already-pending ordinary event
+  ---
+  duration_ms: 32.504084
+  type: 'test'
+  ...
+# Subtest: failed shard recovery does not replace an ordinary active lease
+ok 197 - failed shard recovery does not replace an ordinary active lease
+  ---
+  duration_ms: 27.932769
+  type: 'test'
+  ...
+# Subtest: failed shard recovery does not replace an active recovery lease
+ok 198 - failed shard recovery does not replace an active recovery lease
+  ---
+  duration_ms: 89.903347
+  type: 'test'
+  ...
+# Subtest: failed shard recovery replaces an expired recovery lease
+ok 199 - failed shard recovery replaces an expired recovery lease
+  ---
+  duration_ms: 32.969783
+  type: 'test'
+  ...
+# Subtest: exact-review queue defers coordination without spending review attempts
+ok 200 - exact-review queue defers coordination without spending review attempts
+  ---
+  duration_ms: 49.393317
+  type: 'test'
+  ...
+# Subtest: exact-review queue defers throttle without spending review attempts
+ok 201 - exact-review queue defers throttle without spending review attempts
+  ---
+  duration_ms: 52.024599
+  type: 'test'
+  ...
+# Subtest: exact-review queue terminates deterministic refusals only for the unchanged revision
+not ok 202 - exact-review queue terminates deterministic refusals only for the unchanged revision
+  ---
+  duration_ms: 72.999765
+  type: 'test'
+  location: '/app/test/dashboard-worker-queue-runtime.test.ts:66:14784'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+      {
+        ok: true,
+    +   requeued: false
+    -   requeued: true
+      }
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    ok: true
+    requeued: true
+  actual:
+    ok: true
+    requeued: false
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (/app/test/dashboard-worker-queue-runtime.test.ts:13053:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: exact-review queue terminates every scanner refusal and retries missing terminal reasons
+ok 203 - exact-review queue terminates every scanner refusal and retries missing terminal reasons
+  ---
+  duration_ms: 258.486327
+  type: 'test'
+  ...
+# Subtest: terminal PR refusals retain a verified explanation receipt without retrying
+ok 204 - terminal PR refusals retain a verified explanation receipt without retrying
+  ---
+  duration_ms: 30.364781
+  type: 'test'
+  ...
+# Subtest: exact-review queue validates terminal review failure reasons
+ok 205 - exact-review queue validates terminal review failure reasons
+  ---
+  duration_ms: 24.153008
+  type: 'test'
+  ...
+# Subtest: review failure telemetry binds the active lease source before a queued successor
+ok 206 - review failure telemetry binds the active lease source before a queued successor
+  ---
+  duration_ms: 77.322619
+  type: 'test'
+  ...
+# Subtest: review failure telemetry records failed workflows recovered by reconciliation
+ok 207 - review failure telemetry records failed workflows recovered by reconciliation
+  ---
+  duration_ms: 32.598517
+  type: 'test'
+  ...
+# Subtest: review failure telemetry excludes coordination and throttle deferrals
+ok 208 - review failure telemetry excludes coordination and throttle deferrals
+  ---
+  duration_ms: 64.759614
+  type: 'test'
+  ...
+# Subtest: review failure telemetry cannot block queue completion
+ok 209 - review failure telemetry cannot block queue completion
+  ---
+  duration_ms: 36.402073
+  type: 'test'
+  ...
+# Subtest: exact-review queue spends review attempts for an untyped retry deadline
+ok 210 - exact-review queue spends review attempts for an untyped retry deadline
+  ---
+  duration_ms: 30.912976
+  type: 'test'
+  ...
+# Subtest: exact-review queue does not carry an old coordination deadline or reset budget on a same-source successor
+ok 211 - exact-review queue does not carry an old coordination deadline or reset budget on a same-source successor
+  ---
+  duration_ms: 28.269378
+  type: 'test'
+  ...
+# Subtest: exact-review queue rejects invalid retry deferral contracts
+ok 212 - exact-review queue rejects invalid retry deferral contracts
+  ---
+  duration_ms: 26.609337
+  type: 'test'
+  ...
+# Subtest: exact-review queue rejects regular-review retry kinds for publication work
+ok 213 - exact-review queue rejects regular-review retry kinds for publication work
+  ---
+  duration_ms: 25.910142
+  type: 'test'
+  ...
+# Subtest: exact-review queue requeues a verified source drift exactly once without failure backoff
+ok 214 - exact-review queue requeues a verified source drift exactly once without failure backoff
+  ---
+  duration_ms: 27.174344
+  type: 'test'
+  ...
+# Subtest: exact-review success preserves an already-enqueued newer decision
+ok 215 - exact-review success preserves an already-enqueued newer decision
+  ---
+  duration_ms: 25.766788
+  type: 'test'
+  ...
+# Subtest: exact-review queue rejects invalid source-drift requeue requests
+ok 216 - exact-review queue rejects invalid source-drift requeue requests
+  ---
+  duration_ms: 24.209727
+  type: 'test'
+  ...
+# Subtest: exact-review completion rejects stale owners and is race-idempotent
+ok 217 - exact-review completion rejects stale owners and is race-idempotent
+  ---
+  duration_ms: 31.713937
+  type: 'test'
+  ...
+# Subtest: signed exact-review reconciliation releases only immutable terminal runs
+ok 218 - signed exact-review reconciliation releases only immutable terminal runs
+  ---
+  duration_ms: 124.204598
+  type: 'test'
+  ...
+# Subtest: exact-review reconciliation targets leases beyond 64 entries without accepting stale claims
+ok 219 - exact-review reconciliation targets leases beyond 64 entries without accepting stale claims
+  ---
+  duration_ms: 210.527032
+  type: 'test'
+  ...
+# Subtest: exact-review reconciliation cannot release a later attempt with the same run id
+ok 220 - exact-review reconciliation cannot release a later attempt with the same run id
+  ---
+  duration_ms: 128.294757
+  type: 'test'
+  ...
+# Subtest: exact-review stats heals a missing alarm and expired lease without postponing due alarms
+ok 221 - exact-review stats heals a missing alarm and expired lease without postponing due alarms
+  ---
+  duration_ms: 45.556401
+  type: 'test'
+  ...
+# Subtest: exact-review queue drops an expired failed-shard recovery unless a newer revision superseded it
+ok 222 - exact-review queue drops an expired failed-shard recovery unless a newer revision superseded it
+  ---
+  duration_ms: 35.408028
+  type: 'test'
+  ...
+1..222
+# tests 228
+# suites 0
+# pass 227
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17704.189541

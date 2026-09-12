@@ -123,7 +123,6 @@ async function postEffect() {
   const response = await client.postEffect(
     values.route as ExactReviewBatchPostEffectRoute,
     payload,
-    { retryLifecycle: true },
   );
   console.log(JSON.stringify(response));
 }

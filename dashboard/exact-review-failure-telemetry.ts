@@ -375,9 +375,7 @@ export class ExactReviewFailureTelemetryStore {
           WHERE singleton_id = 1`,
       ),
     )[0] as Record<string, unknown> | undefined;
-    const stageCounts = Object.fromEntries(
-      PUBLIC_FAILURE_STAGES.map((stage) => [stage, 0]),
-    ) as Record<(typeof PUBLIC_FAILURE_STAGES)[number], number>;
+    const stageCounts = Object.fromEntries(PUBLIC_FAILURE_STAGES.map((stage) => [stage, 0]));
     for (const stageRow of this.storage.sql.exec(
       `SELECT stage, COUNT(*) AS attempts FROM ${EXACT_REVIEW_FAILURE_TELEMETRY_TABLE}
         WHERE observed_at >= ? GROUP BY stage`,

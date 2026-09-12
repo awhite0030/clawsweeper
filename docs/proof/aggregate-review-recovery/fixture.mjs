@@ -64,7 +64,7 @@ export async function fixture(root, kind = "mixed") {
   const items = planned.map((number) => ({
     repo: targetRepo,
     number,
-    kind: kind === "mixed-identities" && [3, 7].includes(number) ? "pull_request" : "issue",
+    kind: "issue",
     title: "Synthetic recovery fixture",
     updatedAt: producerEnv.GITHUB_RUN_STARTED_AT,
   }));
@@ -83,7 +83,7 @@ export async function fixture(root, kind = "mixed") {
     itemsDir: reports,
   });
   const originalEnv = process.env;
-  process.env = { ...producerEnv, ...(originalEnv.TMPDIR ? { TMPDIR: originalEnv.TMPDIR } : {}) };
+  process.env = { ...producerEnv };
   try {
     const owner = createReviewActionLedger({
       root,
@@ -178,7 +178,7 @@ Complete retained review.
       }
       const retryable = start(3);
       if (kind === "accepted-mutation") mutation(retryable, "accepted");
-      finish(retryable, "failed", true, kind === "mixed-identities" ? { sourceRevision: digest("reviewed discussion") } : {});
+      finish(retryable, "failed", true);
       const deferred = start(4);
       mutation(deferred, "rejected");
       finish(deferred, "blocked", true, { completionReason: "coordination_deferred" });

@@ -531,11 +531,7 @@ export async function stopHostedTerminal({ path, nonce, tmux }) {
       await proveCompleted();
       return;
     }
-    if (paneIdentity !== `${fields[3]}|${fields[4]}`) {
-      // tmux can also succeed with empty pane fields during owner teardown.
-      await proveCompleted();
-      return;
-    }
+    assert.equal(paneIdentity, `${fields[3]}|${fields[4]}`);
     try {
       command("kill-session", "-t", armed.session);
     } catch {

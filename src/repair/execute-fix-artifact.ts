@@ -3553,10 +3553,10 @@ function checkoutRecoverableReplacementBranch({
         `recoverable branch ${branch} changed between API lease and fetch: expected ${remoteLeaseSha}, fetched ${recoveredHeadSha}`,
       );
     }
-    materializeFetchedReplacementCommit({
-      targetDir,
-      sourceSha: recoveredHeadSha,
-      remoteRef: `refs/remotes/origin/${branch}`,
+    materializeTargetCommitWithIsolation({
+      cwd: targetDir,
+      expectedHeadSha: recoveredHeadSha,
+      timeoutMs: targetValidationTimeoutMs,
     });
     switchTargetBranchWithPlumbing({
       cwd: targetDir,
@@ -3601,51 +3601,13 @@ function checkoutRecoverableReplacementBranch({
       remote_lease_sha: remoteLeaseSha,
     };
   }
-  // Fetch can advance the base ref without moving the fresh clone's HEAD.
-  const fetchedBaseSha = run("git", ["rev-parse", `origin/${baseBranch}`], {
-    cwd: targetDir,
-  }).trim();
-  materializeFetchedReplacementCommit({
-    targetDir,
-    sourceSha: fetchedBaseSha,
-    remoteRef: `refs/remotes/origin/${baseBranch}`,
-  });
   switchTargetBranchWithPlumbing({
     cwd: targetDir,
     branch,
-    expectedHeadSha: fetchedBaseSha,
+    expectedHeadSha: run("git", ["rev-parse", `origin/${baseBranch}`], { cwd: targetDir }).trim(),
     timeoutMs: targetValidationTimeoutMs,
   });
   return { resumed: false, remote_lease_sha: remoteLeaseSha };
-}
-
-function materializeFetchedReplacementCommit({
-  targetDir,
-  sourceSha,
-  remoteRef,
-}: {
-  targetDir: string;
-  sourceSha: string;
-  remoteRef: string;
-}) {
-  // Hydrate one pinned tree here; isolated checkout cannot perform lazy fetches.
-  runGitNetwork(
-    [
-      "fetch",
-      "--no-tags",
-      "--refetch",
-      "--no-filter",
-      "--depth=1",
-      `https://github.com/${result.repo}.git`,
-      `+${sourceSha}:${remoteRef}`,
-    ],
-    targetDir,
-  );
-  materializeTargetCommitWithIsolation({
-    cwd: targetDir,
-    expectedHeadSha: sourceSha,
-    timeoutMs: targetValidationTimeoutMs,
-  });
 }
 
 function commitCheckpointIfNeeded({ targetDir, message, trailers = [] }: LooseRecord) {
