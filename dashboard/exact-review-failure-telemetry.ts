@@ -179,7 +179,6 @@ export function exactReviewFailureSourceFingerprint(decision: ExactReviewDecisio
       version: 1,
       target: `${decision.targetRepo}#${decision.itemNumber}`,
       target_branch: decision.targetBranch,
-      source_action: decision.sourceAction,
       head_sha: source.sourceHeadSha,
       base_sha: sourceBaseSha,
       is_draft: typeof decision.sourceIsDraft === "boolean" ? decision.sourceIsDraft : null,

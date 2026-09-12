@@ -76,7 +76,7 @@ function schedulerItemKey(repo: string, number: number): string {
 }
 
 export function reviewedAtMs(review: SchedulerExistingReview | null): number | null {
-  if (review?.reviewStatus !== "complete") return null;
+  if (review?.reviewStatus !== "complete" && review?.reviewStatus !== "blocked") return null;
   if (!review.reviewedAt) return null;
   const reviewedAt = Date.parse(review.reviewedAt);
   return Number.isFinite(reviewedAt) ? reviewedAt : null;
