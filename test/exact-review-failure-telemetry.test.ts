@@ -168,7 +168,7 @@ test("review failure source fingerprints distinguish PR base revisions", () => {
     exactReviewFailureSourceFingerprint(decision),
     exactReviewFailureSourceFingerprint({ ...decision, sourceBaseSha: "c".repeat(40) }),
   );
-  assert.notEqual(
+  assert.equal(
     exactReviewFailureSourceFingerprint(decision),
     exactReviewFailureSourceFingerprint({ ...decision, sourceAction: "unlocked" }),
   );

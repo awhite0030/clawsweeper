@@ -12926,7 +12926,7 @@ test("exact-review queue terminates deterministic refusals only for the unchange
   const newer = leasedExactReviewQueueItem(711, "7110");
   const findingsTerminal = leasedExactReviewQueueItem(712, "7120");
   newer.revision = 2;
-  newer.decision = { ...newer.decision, sourceAction: "synchronize" };
+  newer.decision = { ...newer.decision, sourceHeadSha: "b".repeat(40) };
   await storage.put("exact-review-queue", {
     deliveries: {},
     items: {
@@ -13640,6 +13640,7 @@ test("exact-review success preserves an already-enqueued newer decision", async 
   const item = leasedExactReviewQueueItem(714, "7140");
   item.revision = 2;
   item.decision.sourceAction = "edited";
+  item.decision.sourceHeadSha = "b".repeat(40);
   await storage.put("exact-review-queue", {
     deliveries: {},
     items: { "openclaw/openclaw#714": item },
@@ -14347,6 +14348,7 @@ test("exact-review queue drops an expired failed-shard recovery unless a newer r
   const supersededRecovery = leasedExactReviewQueueItem(703, "7030");
   supersededRecovery.leaseDecision.sourceAction = "failed_review_shard_recovery";
   supersededRecovery.decision.sourceAction = "edited";
+  supersededRecovery.decision.sourceHeadSha = "b".repeat(40);
   supersededRecovery.decision.supersedesInProgress = true;
   supersededRecovery.revision = 2;
   supersededRecovery.leaseExpiresAt = Date.now() - 1;
