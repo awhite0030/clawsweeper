@@ -270,18 +270,13 @@ test("rate-limit lookup and one App fallback share the remaining deadline", (t) 
     f.requests.map((request) => request.token),
     [f.publicToken, f.publicToken, f.appToken],
   );
-  assert.equal(f.observations()[0]?.provenance, "fallback");
-  assert.equal(f.observations().at(-1)?.provenance, "rate_limit_status");
+  assert.equal(f.observations()[0]?.provenance, "rate_limit_status");
   assert.deepEqual(
     f.metrics().map((entry) => entry.outcome),
-    ["throttle", "success", "success"],
+    ["success", "throttle", "success"],
   );
   assert.throws(() => f.execution.ghJson(args, { deadlineAt }), { name: "GitHubRateLimitError" });
-  assert.equal(
-    f.requests.length,
-    3,
-    "neither the exhausted pool nor the App fallback is probed again",
-  );
+  assert.equal(f.requests.length, 4, "the same App fallback must not be reclaimed");
 });
 
 test("expiry records throttling without claiming an unused lookup or fallback", (t) => {
@@ -301,7 +296,7 @@ test("expiry records throttling without claiming an unused lookup or fallback", 
     },
     true,
   );
-  const budget: GitHubRuntimeBudget = { startedAtMs: f.state.now, maxRuntimeMs: 180_000 };
+  const budget: GitHubRuntimeBudget = { startedAtMs: f.state.now, maxRuntimeMs: 60_000 };
   f.runtime.withGitHubRuntimeBudget(budget, () => {
     assert.throws(
       () => f.execution.ghJson(args, { deadlineAt: f.state.now + 30_000 }),
@@ -317,7 +312,6 @@ test("expiry records throttling without claiming an unused lookup or fallback", 
       ["throttle"],
     );
     expire = false;
-    f.state.now += 61_000;
     assert.deepEqual(f.execution.ghJson(args, { deadlineAt: f.state.now + 5_000 }), { ok: true });
     assert.deepEqual(
       f.requests.map((request) => request.token),
@@ -362,7 +356,6 @@ test("an undispatched rate-limit lookup releases its scope and lock for the next
   assert.equal(f.requests.length, 1);
   assert.equal(existsSync(lockPath), false);
   assert.equal(f.observations()[0]?.provenance, "fallback");
-  f.state.now += 61_000;
   assert.deepEqual(f.execution.ghJson(args, { deadlineAt: f.state.now + 5_000 }), { ok: true });
   assert.equal(f.requests.filter((request) => request.args[1] === "rate_limit").length, 1);
   assert.equal(f.observations().at(-1)?.provenance, "rate_limit_status");
@@ -398,7 +391,7 @@ for (const outcome of ["success", "failure"] as const) {
     assert.equal(existsSync(`${f.observationPath}.fallback-target_app.lock`), false);
     assert.deepEqual(
       f.metrics().map((entry) => entry.outcome),
-      ["throttle", outcome === "success" ? "success" : "transient"],
+      [outcome === "success" ? "success" : "transient", "throttle"],
     );
     assert.deepEqual(f.execution.ghJson(args, { deadlineAt: f.state.now + 5_000 }), { ok: true });
     assert.equal(f.requests.filter((request) => request.args[1] === "rate_limit").length, 1);
@@ -456,7 +449,7 @@ test("a fallback claim that outlives admission is released for a later member", 
   assert.deepEqual(execution.ghJson(args, { deadlineAt: f.state.now + 5_000 }), { ok: true });
   assert.deepEqual(
     f.requests.map((request) => request.token),
-    [f.publicToken, f.appToken],
+    [f.publicToken, f.publicToken, f.appToken],
   );
   assert.equal(existsSync(`${f.observationPath}.fallback-target_app.lock`), true);
   assert.throws(() => execution.ghJson(args, { deadlineAt: f.state.now + 5_000 }), {

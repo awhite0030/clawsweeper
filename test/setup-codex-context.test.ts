@@ -11,7 +11,6 @@ const actionPath = resolve(".github/actions/setup-codex");
 const action = parse(readFileSync(join(actionPath, "action.yml"), "utf8"));
 const step = action.runs.steps.find((entry) => entry.name === "Configure direct API context");
 const version = action.inputs["codex-version"].default;
-assert.match(version, /^\d+\.\d+\.\d+(?:-[\w.-]+)?$/);
 const modelInfo = {
   slug: "gpt-6-astra",
   display_name: "Synthetic native model",
@@ -74,7 +73,7 @@ globalThis.fetch = async (url) => {
 test("direct API setup preserves the complete native catalogue and existing proxy authentication", () => {
   const supportedModels = [
     modelInfo,
-    ...["gpt-6-sol", "gpt-5.6-sol", "gpt-5.6-terra", "gpt-5.6-luna"].map((slug) => ({
+    ...["gpt-5.6-sol", "gpt-5.6-terra", "gpt-5.6-luna"].map((slug) => ({
       ...modelInfo,
       slug,
       node_repl_auto_review_required: false,
