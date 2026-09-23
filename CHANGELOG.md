@@ -7,6 +7,10 @@ checkpoint, and status-only commits are intentionally omitted.
 
 ## 0.3.1 - Unreleased
 
+- Qualify the relocated Gateway config CDP-redaction fixture by its exact old and new source lines while preserving complete input scanning and changed-input refusal.
+
+- Move ClawSweeper review and fix lanes to GPT-6 Sol with high reasoning and fast service, and refresh the hosted Codex tools to the latest green main snapshot.
+
 - Admit generated Git object metadata findings in raw diffs only after canonical source witnesses and a complete supplemental scan, including added and deleted files, while preserving all primary source scanning.
 
 - Keep re-review acknowledgements owned by the durable queue so a delayed recovery router cannot overwrite a completed or failed status.
@@ -18,6 +22,8 @@ checkpoint, and status-only commits are intentionally omitted.
 - Stop POSIX Codex descendants when their leader exits naturally, including descendants holding output pipes, without turning clean exits into review timeouts. Thanks @SebTardif.
 
 - Reduce publication backlog churn with shared inline-comment reads, bounded source-fetch retries that reuse verified Git objects, transient scanner-download retries, page-bounded dead-letter membership reads, and two isolated preparation workers per batch.
+
+- Stop publication metadata and comment reads from repeatedly probing exhausted GitHub credentials within a batch; preserve scoped fallback and resume fresh reads at the recorded reset.
 
 - Bound conflict self-heal, failed-run self-heal, and issue-implementation workflow dispatches with the existing GitHub CLI deadline. Thanks @SebTardif.
 
