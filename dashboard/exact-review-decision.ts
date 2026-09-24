@@ -136,19 +136,7 @@ export type ExactReviewEditedSemanticInput = {
   fingerprint: string;
 };
 export type ExactReviewTargetItemState =
-  | {
-      state: "open";
-      headSha?: string;
-      sourceIdentity?: Pick<
-        ExactReviewDecision,
-        | "sourceHeadSha"
-        | "sourceBaseSha"
-        | "sourceIsDraft"
-        | "sourceContentRevision"
-        | "sourceHeadVerified"
-        | "sourceUpdatedAt"
-      >;
-    }
+  | { state: "open"; headSha?: string }
   | { state: "terminal" }
   | { state: "unavailable" };
 
